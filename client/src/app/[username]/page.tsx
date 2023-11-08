@@ -1,15 +1,54 @@
 import Image from "next/image";
 import React from "react";
 
+const Interests = {
+  left: [
+    {
+      genre: "Relationship",
+      rating: 0,
+    },
+    {
+      genre: "Politics",
+      rating: 4,
+    },
+    {
+      genre: "Education",
+      rating: 3,
+    },
+    {
+      genre: "Techno",
+      rating: 5,
+    },
+  ],
+  right: [
+    {
+      genre: "Art and Design",
+      rating: 4,
+    },
+    {
+      genre: "Finance",
+      rating: 1,
+    },
+    {
+      genre: "Education",
+      rating: 2,
+    },
+    {
+      genre: "Web Dev",
+      rating: 5,
+    },
+  ],
+};
+
 function Page() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center mt-10">
       {/* top section */}
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row w-full justify-center items-center gap-5 ">
         {/* top left */}
-        <div className="flex flex-col justify-center gap-3 mx-2 sm:mx-0">
+        <div className="flex flex-col justify-center max-w-lg w-full gap-3 px-2">
           {/* top left first */}
-          <div className="flex flex-col max-w-lg w-full bg-white border-[1px] border-border-color rounded-lg shadow-custom px-3 sm:px-5 md:px-8 py-4">
+          <div className="flex flex-col bg-white border-[1px] border-border-color rounded-lg shadow-custom px-3 sm:px-5 md:px-8 py-4">
             <div className="flex justify-between">
               <div className="flex">
                 <Image
@@ -51,7 +90,7 @@ function Page() {
             <div className="flex justify-between mt-3 gap-2">
               <div className="flex items-center gap-1 px-3 py-1 rounded-full bg-lime-200">
                 <div className=" my-auto h-5 w-5 rounded-full bg-black "></div>
-                <p className=" font-normal text-sm">Current Mood: Very Happy</p>
+                <p className=" font-normal text-sm">Current Mood: Happy</p>
               </div>
               <div className="flex gap-1 sm:gap-2">
                 <div className=" my-auto h-6 w-6 bg-red-200 "></div>
@@ -60,7 +99,6 @@ function Page() {
               </div>
             </div>
           </div>
-          
           {/* top left second */}
           <div className="flex flex-col max-w-lg w-full bg-white border-[1px] border-border-color rounded-lg shadow-custom px-1 sm:px-3 md:px-6 py-4">
             <div className="flex gap-2 items-center mb-2 px-2">
@@ -115,7 +153,29 @@ function Page() {
           </div>
         </div>
         {/* top right section */}
-        <div></div>
+        <div className="flex justify-center max-w-3xl w-full h-full px-2">
+          <div className="flex flex-col w-full bg-white border-[1px] border-border-color rounded-lg shadow-custom px-3 sm:px-5 py-4">
+            <p className=" text-lg my-2">Profile</p>
+            <p className=" text-sm">🙏 Embracing Growth & Wellness...</p>
+            <p className=" text-sm">
+              Hello there! I'm Bhaumik Kore, and I'm on a journey of
+              self-discovery and personal growth. This platform feels like a
+              warm embrace for my soul, a place where I can connect, learn, and
+              share experiences with like-minded individuals.
+            </p>
+            <p className=" text-lg my-2">Interests</p>
+            <div className="flex flex-col sm:flex-row w-full">
+              <div className="w-1/2">
+                {Interests.left.map((eachInterest) => (
+                  <div>
+                    <p>{eachInterest.genre}</p>
+                    
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
