@@ -60,6 +60,7 @@ function Page() {
               </div>
             </div>
           </div>
+          
           {/* top left second */}
           <div className="flex flex-col max-w-lg w-full bg-white border-[1px] border-border-color rounded-lg shadow-custom px-1 sm:px-3 md:px-6 py-4">
             <div className="flex gap-2 items-center mb-2 px-2">
