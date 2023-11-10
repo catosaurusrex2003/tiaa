@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import MainBanner from "./mainBanner";
+import { DoubleBarPlot } from "./doubleBarPlot";
+import Calendar from "./calender";
 
 function Page() {
   return (
@@ -80,6 +82,92 @@ function Page() {
                 <p className="text-gray-400 text-xs">Interactions</p>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="flex flex-wrap justify-center sm:justify-start gap-3 sm:gap-7 my-3 sm:my-5">
+          {/* card 3 */}
+          <div className="flex flex-col justify-between bg-white border-[1px] border-border-color rounded-lg shadow-custom p-5 max-w-xl w-full">
+            <div className="flex justify-between items-center border-b-2 border-gray-100 pb-3">
+              <p>Interactions Trends</p>
+              <div className="flex justify-between gap-4">
+                <svg
+                  width="8"
+                  height="14"
+                  viewBox="0 0 8 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.125 13.25L0.875 7L7.125 0.75"
+                    stroke="black"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <svg
+                  className=" rotate-180"
+                  width="8"
+                  height="14"
+                  viewBox="0 0 8 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7.125 13.25L0.875 7L7.125 0.75"
+                    stroke="black"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div className="flex  flex-col sm:flex-row mt-3">
+              <div className="flex flex-row sm:flex-col justify-between mb-4 sm:mb-0 gap-2">
+                <div className="flex flex-col bg-sky-50 border-[1px] border-gray-200 rounded-lg w-32 px-3 py-2">
+                  <div className="flex justify-between items-center gap-16">
+                    <p className="text-sm">285</p>
+                    <hr className="w-2 border-black border-[1px]" />
+                  </div>
+                  <p className="text-xs text-gray-400">Posts</p>
+                </div>
+                <div className="flex flex-col bg-sky-50 border-[1px] border-gray-200 rounded-lg w-32 px-3 py-2">
+                  <div className="flex justify-between items-center gap-16">
+                    <p className="text-sm">47</p>
+                    <hr className="w-2 border-black border-[1px]" />
+                  </div>
+                  <p className="text-xs text-gray-400">Comments</p>
+                </div>
+                <div className="hidden sm:flex flex-col gap-1">
+                  <div className="flex items-center gap-2">
+                    <div className=" h-3 w-3 rounded-full bg-emerald-600" />
+                    <p className=" text-xs">This week</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className=" h-3 w-3 rounded-full bg-gray-300" />
+                    <p className=" text-xs">Last week</p>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full h-full">
+                <DoubleBarPlot />
+              </div>
+              <div className="flex sm:hidden flex-col gap-1 mt-3">
+                <div className="flex items-center gap-2">
+                  <div className=" h-3 w-3 rounded-full bg-emerald-600" />
+                  <p className=" text-xs">This week</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className=" h-3 w-3 rounded-full bg-gray-300" />
+                  <p className=" text-xs">Last week</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* CALENDER */}
+          <div>
+            <Calendar />
           </div>
         </div>
       </div>
