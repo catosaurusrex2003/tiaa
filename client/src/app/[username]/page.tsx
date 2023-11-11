@@ -3,12 +3,13 @@ import React from "react";
 import MainBanner from "./mainBanner";
 import { DoubleBarPlot } from "./doubleBarPlot";
 import Calendar from "./calender";
+import CustomActivityCalender from "./activityCalender";
 
 function Page() {
   return (
     <section className="mt-10 mb-52">
       <MainBanner />
-      <div className=" max-w-7xl w-full px-2 sm:px-0 mx-auto">
+      <div className=" max-w-7xl w-full px-2 mx-auto">
         <p className=" text-lg mt-5 mb-2 font-medium">Activity Log</p>
         <div className="flex flex-wrap justify-center sm:justify-start gap-3 sm:gap-7">
           {/* card 1 */}
@@ -166,9 +167,12 @@ function Page() {
             </div>
           </div>
           {/* CALENDER */}
-          <div>
+          <div className="">
             <Calendar />
           </div>
+        </div>
+        <div>
+          <CustomActivityCalender />
         </div>
       </div>
     </section>
