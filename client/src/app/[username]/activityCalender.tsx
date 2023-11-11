@@ -13,7 +13,7 @@ function CustomActivityCalender() {
       <ActivityCalendar
         data={data2022}
         theme={{
-          light: ["#f0f0f0", "#c4edde", "#7ac7c4", "#286d94", "#f73859"],
+          light: ["#f0f0f0", "#c4edde", "#7ac7c4", "#286d94", "#ef4444"],
           //   light: ["#f0f0f0", "#c4edde", "#7ac7c4", "#f73859", "#384259"],
           dark: ["#383838", "#4D455D", "#7DB9B6", "#F5E9CF", "#E96479"],
         }}
@@ -23,7 +23,7 @@ function CustomActivityCalender() {
       <ActivityCalendar
         data={data2023}
         theme={{
-          light: ["#f0f0f0", "#c4edde", "#7ac7c4", "#286d94", "#f73859"],
+          light: ["#f0f0f0", "#c4edde", "#7ac7c4", "#286d94", "#ef4444"],
           dark: ["#383838", "#4D455D", "#7DB9B6", "#F5E9CF", "#E96479"],
         }}
         colorScheme="light"
