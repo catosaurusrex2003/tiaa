@@ -1,6 +1,6 @@
 export default function InputGroup() {
   return (
-    <div className="flex items-center w-3/5 h-14 ml-24 mb-8 mt-7 shadow-xl rounded-md border">
+    <div className="flex items-center w-full sm:w-4/5 py-4 px-3 shadow-xl rounded-md border">
       <button className="ml-6">
         <svg
           width="20"
