@@ -169,7 +169,7 @@ function Page() {
                 {Interests.left.map((eachInterest) => (
                   <div>
                     <p>{eachInterest.genre}</p>
-                    
+
                   </div>
                 ))}
               </div>
