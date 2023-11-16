@@ -1,10 +1,10 @@
 export default function Search() {
   return (
-    <div className="flex items-center w-60 h-9 mt-2 my-3.5 cursor-pointer bg-[#e9e9e9] rounded-xl">
+    <div className="flex items-center gap-2 w-full px-4 py-2 cursor-pointer bg-[#e9e9e9] rounded-lg">
       <svg
-        className="m-2.5"
-        width="14"
-        height="14"
+        className=""
+        width="18"
+        height="18"
         viewBox="0 0 14 14"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,11 @@ export default function Search() {
           stroke-linejoin="round"
         />
       </svg>
-      <p className="text-sm font-medium text-[#7C8081]">Search...</p>
+      {/* <p className="text-sm font-medium text-[#7C8081]">Search...</p> */}
+      <input
+        className=" bg-transparent w-full text-sm"
+        placeholder="Search..."
+      />
     </div>
   );
 }
