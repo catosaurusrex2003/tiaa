@@ -110,6 +110,7 @@ export default function Messages() {
           console.log(localMessageList);
 
         case "newPrivateMessage":
+          console.log("new message came");
           const localMessage: eachMessageType = {
             senderEmail: message.message.senderEmail.S,
             senderUsername: message.message.senderUsername.S,
@@ -117,6 +118,14 @@ export default function Messages() {
             timestamp: message.message.timestamp.S,
             conversationId: message.message.conversationId.S,
           };
+          // if (message.message.receiverEmail.S == selfEmail.final) {
+          //   setMessageList((prev) => [...prev, localMessage]);
+          // } else if (message.message.senderEmail.S == selfEmail.final) {
+          //   setMessageList((prev) => [...prev, localMessage]);
+          // }
+          console.log(message.message);
+          console.log(selectedConvoRef.current);
+          console.log(selfEmail.final);
           if (message.message.senderEmail.S == selectedConvoRef.current) {
             setMessageList((prev) => [...prev, localMessage]);
           }
@@ -151,7 +160,11 @@ export default function Messages() {
 
   useEffect(() => {
     console.log("scrolling to bottom");
-    messageScrollerDiv.current?.scrollIntoView({ behavior: "smooth" });
+    // messageScrollerDiv.current?.scrollIntoView({ behavior: "smooth" });
+    if (messageScrollerDiv.current) {
+      messageScrollerDiv.current.scrollTop =
+        messageScrollerDiv.current.scrollHeight;
+    }
   }, [messageList]);
 
   const sendMessage = (mssg: string | undefined): boolean => {
@@ -209,12 +222,15 @@ export default function Messages() {
                 })}
               </div>
             </section>
-            <section className="flex flex-col col-span-10 md:col-span-7 overflow-y-auto h-full ">
+            <section className="flex flex-col relative col-span-10 md:col-span-7 overflow-y-auto h-full">
               {selectedConvo ? (
                 <>
                   {messageList && (
                     <>
-                      <div className="overflow-y-auto hide-scrollbar max-h-full sm:w-11/12 mx-auto">
+                      <div
+                        ref={messageScrollerDiv}
+                        className="overflow-y-auto hide-scrollbar max-h-full sm:w-11/12 mb-20 mx-auto"
+                      >
                         {messageList.map((eachMessage) => (
                           <EachMessage
                             selfEmail={selfEmail.final}
@@ -225,9 +241,9 @@ export default function Messages() {
                             conversationId={eachMessage.conversationId}
                           />
                         ))}
-                        <div ref={messageScrollerDiv}></div>
+                        {/* <div ref={messageScrollerDiv}></div> */}
                       </div>
-                      <div className="bottom-0 flex justify-center py-2">
+                      <div className="bottom-0 z-10  absolute w-full flex justify-center py-2">
                         <InputGroup sendMessage={sendMessage} />
                       </div>
                     </>
@@ -287,6 +303,8 @@ export default function Messages() {
             onClick={() => {
               setSelfEmail((prev) => ({ ...prev, final: prev.temp }));
               setSelfUsername((prev) => ({ ...prev, final: prev.temp }));
+              setSelfBio((prev) => ({ ...prev, final: prev.temp }));
+              setSelfStatus((prev) => ({ ...prev, final: prev.temp }));
             }}
           >
             SET
