@@ -93,13 +93,10 @@ export default function Messages() {
             timestamp: message.message.timestamp.S,
             conversationId: message.message.conversationId.S,
           };
-          console.log("got a new message");
-          console.log(message.message.senderEmail.S);
-          console.log(selectedConvoRef.current);
-          console.log(
-            message.message.senderEmail.S == selectedConvoRef.current
-          );
           if (message.message.senderEmail.S == selectedConvoRef.current) {
+            setMessageList((prev) => [...prev, localMessage]);
+          }
+          if (message.message.senderEmail.S == selfEmail.final) {
             setMessageList((prev) => [...prev, localMessage]);
           }
       }
@@ -127,6 +124,35 @@ export default function Messages() {
     }
     selectedConvoRef.current = selectedConvo;
   }, [selectedConvo]);
+
+  // const scrollToBottom = () => {
+  //   console.log("scrolling to bottom");
+  //   scrollDiv.current?.scrollIntoView({ behavior: "smooth" });
+  // };
+
+  const sendMessage = (mssg: string | undefined): boolean => {
+    if (socket && mssg) {
+      console.log("sending message");
+      try {
+        socket.send(
+          JSON.stringify({
+            action: "sendPrivate",
+            messageText: mssg,
+            receiverEmail: selectedConvoRef.current,
+            receiverUsername: "", //this is redundant as it is.
+            senderEmail: selfEmail.final,
+            senderUsername: selfUsername.final,
+          })
+        );
+        return true;
+      } catch (error) {
+        console.log("error while sending messages", error);
+        return false;
+      }
+    } else {
+      return false;
+    }
+  };
 
   return (
     <>
@@ -172,7 +198,7 @@ export default function Messages() {
                         ))}
                       </div>
                       <div className="bottom-0 flex justify-center py-2">
-                        <InputGroup />
+                        <InputGroup sendMessage={sendMessage} />
                       </div>
                     </>
                   )}

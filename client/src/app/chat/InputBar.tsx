@@ -1,7 +1,19 @@
-export default function InputGroup() {
+import { useState } from "react";
+
+type props = {
+  sendMessage: (mssg: string | undefined) => boolean;
+};
+
+export default function InputGroup({ sendMessage }: props) {
+  const [myMessageString, setMyMessageString] = useState<string>();
+
+  const sendMessageHandler = () => {
+    const result = sendMessage(myMessageString);
+    if (result) setMyMessageString("");
+  };
   return (
-    <div className="flex items-center w-full sm:w-4/5 py-4 px-3 shadow-xl rounded-md border">
-      <button className="ml-6">
+    <div className="flex items-center justify-between w-full sm:w-4/5 py-4 px-3 shadow-xl rounded-md border">
+      <button className="">
         <svg
           width="20"
           height="21"
@@ -21,9 +33,16 @@ export default function InputGroup() {
       <input
         type="text"
         placeholder="Tell me more..."
-        className="ml-3 bg-inherit w-4/5"
+        value={myMessageString}
+        onChange={(e) => setMyMessageString(e.target.value)}
+        onKeyDown={(event) => {
+          if (event.key === "Enter") {
+            sendMessageHandler();
+          }
+        }}
+        className="bg-inherit w-4/5"
       />
-      <button className="ml-2.5">
+      <button className="">
         <svg
           width="20"
           height="22"
@@ -39,7 +58,7 @@ export default function InputGroup() {
           />
         </svg>
       </button>
-      <button className="ml-2.5">
+      <button className="" onClick={sendMessageHandler}>
         <svg
           width="21"
           height="21"
