@@ -9,19 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@zegocloud/zego-uikit-prebuilt": "^1.8.15",
     "chart.js": "^4.4.0",
     "clsx": "^2.0.0",
-    "@zegocloud/zego-uikit-prebuilt": "^1.8.15",
     "next": "14.0.1",
     "react": "^18.2.0",
     "react-activity-calendar": "^2.1.2",
     "react-dom": "^18.2.0",
-    "tailwind-merge": "^2.0.0"
+    "tailwind-merge": "^2.0.0",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/node": "^20.9.0",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
+    "@types/uuid": "^9.0.7",
     "autoprefixer": "^10.4.16",
     "eslint": "^8.53.0",
     "eslint-config-next": "14.0.1",
