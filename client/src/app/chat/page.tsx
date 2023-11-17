@@ -31,6 +31,7 @@ export default function Messages() {
   const [messageList, setMessageList] = useState<eachMessageType[]>([]);
   const [selectedConvo, setSelectedConvo] = useState<string | undefined>(); //is selected email
   const selectedConvoRef = useRef<string>();
+  const messageScrollerDiv = useRef<any>();
 
   useEffect(() => {
     console.log("useEffect runing");
@@ -125,10 +126,10 @@ export default function Messages() {
     selectedConvoRef.current = selectedConvo;
   }, [selectedConvo]);
 
-  // const scrollToBottom = () => {
-  //   console.log("scrolling to bottom");
-  //   scrollDiv.current?.scrollIntoView({ behavior: "smooth" });
-  // };
+  useEffect(() => {
+    console.log("scrolling to bottom");
+    messageScrollerDiv.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messageList]);
 
   const sendMessage = (mssg: string | undefined): boolean => {
     if (socket && mssg) {
@@ -196,6 +197,7 @@ export default function Messages() {
                             conversationId={eachMessage.conversationId}
                           />
                         ))}
+                        <div ref={messageScrollerDiv}></div>
                       </div>
                       <div className="bottom-0 flex justify-center py-2">
                         <InputGroup sendMessage={sendMessage} />
