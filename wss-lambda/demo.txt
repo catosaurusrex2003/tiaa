@@ -2,32 +2,28 @@ U1
 {
 "action":"updateConnectionId",
 "email":"123456@gmail.com",
-"username":"satvam"
-}
-U2
-{
-"action":"updateConnectionId",
-"email":"78910@gmail.com",
-"username":"mohammed"
+"username":"satvam",
+"status":"a 1 word status",
+"bio":"a 1 line bio"
 }
 
 U1
 {
 "action":"sendPrivate",
 "messageText":"I am very",
-"receiverEmail":"78910@gmail.com",
-"receiverUsername":"mohammed",
+"receiverEmail":"mohdmehdi2003@gmail.com",
+"receiverUsername":"Mohammed Mehdi",
 "senderEmail":"123456@gmail.com",
 "senderUsername":"satvam"
 }
 U2
 {
 "action":"sendPrivate",
-"messageText":"Hello satvam",
-"receiverEmail":"123456@gmail.com",
-"receiverUsername":"satvam",
-"senderEmail":"78910@gmail.com",
-"senderUsername":"mohammed"
+"messageText":"Hello i am patawar",
+"receiverEmail":"mohdmehdi2003@gmail.com",
+"receiverUsername":"Mohammed Mehdi",
+"senderEmail":"saviouratharv@gmail.com",
+"senderUsername":"Patawar"
 }
 
 generic
@@ -41,8 +37,3 @@ generic
 {
 "action":"fetchAllUsers"
 }
-
-
-
-
-

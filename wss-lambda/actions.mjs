@@ -20,7 +20,7 @@ import { DynamoDBClient, PutItemCommand, GetItemCommand, QueryCommand, ScanComma
 const ENDPOINT = 'https://emvq4hf0je.execute-api.ap-south-1.amazonaws.com/production';
 
 const gatewayClient = new ApiGatewayManagementApiClient({ endpoint: ENDPOINT });
-const dynamoClient = new DynamoDBClient({ region: "eu-north-1" });
+const dynamoClient = new DynamoDBClient({ region: "ap-south-1" });
 
 
 const sendToOne = async (id, body) => {
@@ -54,12 +54,15 @@ export const updateConnectionId = async (payload, meta) => {
     Item: {
       email: { S: payload.email },
       username: { S: payload.username },
+      status: { S: payload.status },
+      bio: { S: payload.bio },
       connectionId: { S: meta.connectionId }
     }
   };
   try {
     await dynamoClient.send(new PutItemCommand(newConnectionIdParams));
     console.log("Item created or updated successfully.");
+    await sendToOne(meta.connectionId, { event: "updatedConnectionId" });
   } catch (err) {
     console.error(err);
     return {
@@ -122,7 +125,7 @@ export const sendPrivate = async (payload, meta) => {
   }
   // send the message to connectionId.
   try {
-    await sendToAll([recieverConnectionId, meta.connectionId], item);
+    await sendToAll([recieverConnectionId, meta.connectionId], { event: "newPrivateMessage", message: item });
   } catch (err) {
     console.error(err);
     return { statusCode: 500, body: 'Failed to send socket message to reciepent: ' + JSON.stringify(err) };
@@ -147,7 +150,7 @@ export const fetchAllMessages = async (payload, meta) => {
     console.log("------------ITEMS FETCHED SUCCESFULLY---------", Items);
     // echo the message back to connectionId.
     try {
-      await sendToOne(meta.connectionId, { messageList: Items });
+      await sendToOne(meta.connectionId, { event: "allMessagesResponse", messageList: Items });
     } catch (err) {
       console.error(err);
       return {}
@@ -166,7 +169,7 @@ export const fetchAllUsers = async (payload, meta) => {
     const data = await dynamoClient.send(new ScanCommand(queryParams));
     console.log("Success", data.Items);
     try {
-      await sendToOne(meta.connectionId, data);
+      await sendToOne(meta.connectionId, { event: "allUsersResponse", usersList: data });
     } catch (err) {
       console.error(err);
       return {}
