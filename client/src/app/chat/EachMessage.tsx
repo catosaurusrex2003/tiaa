@@ -1,6 +1,9 @@
-type props = eachMessageType;
+type props = eachMessageType & {
+  selfEmail: string | undefined;
+};
 
 export default function EachMessage({
+  selfEmail,
   senderEmail,
   senderUsername,
   messageText,
@@ -10,7 +13,7 @@ export default function EachMessage({
   return (
     <div className="flex items-center py-4 border-b-[1px] border-[#D8D8D8]">
       <div className="mr-2 sm:mr-5">
-        <div className=" h-6 w-6 sm:h-10 sm:w-10 rounded-full bg-green-200" />
+        <div className={`h-6 w-6 sm:h-10 sm:w-10 rounded-full ${senderEmail==selfEmail?"bg-blue-200":"bg-green-200"}`} />
       </div>
       <p className=" w-full text-sm sm:text-base">{messageText}</p>
       <div className=" flex items-center gap-3">

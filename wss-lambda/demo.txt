@@ -2,13 +2,9 @@ U1
 {
 "action":"updateConnectionId",
 "email":"123456@gmail.com",
-"username":"satvam"
-}
-U2
-{
-"action":"updateConnectionId",
-"email":"saviouratharv@gmail.com",
-"username":"Patawar"
+"username":"satvam",
+"status":"a 1 word status",
+"bio":"a 1 line bio"
 }
 
 U1

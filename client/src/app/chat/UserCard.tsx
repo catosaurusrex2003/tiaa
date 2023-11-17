@@ -1,12 +1,16 @@
 type props = {
   username: string;
   email: string;
+  status:string,
+  bio:string,
   selectedConvo: string | undefined;
   setSelectedConvo: (newState: string) => void;
 };
 export default function UserCard({
   username,
   email,
+  status,
+  bio,
   selectedConvo,
   setSelectedConvo,
 }: props) {
@@ -25,10 +29,11 @@ export default function UserCard({
           <h3 className="text-sm font-medium">{username || "John Doe"}</h3>
           <li className="text-xs text-[#7C8081]">10 mins ago</li>
         </div>
-        <p className="text-xs text-[#7C8081]">Important Work</p>
+        <p className="text-xs text-[#7C8081]">{status}</p>
         <p className="text-xs  mt-1 truncate w-52 ">
-          Track your income Track your income Track your income Track your
-          income
+          {/* Track your income Track your income Track your income Track your
+          income */}
+          {bio}
         </p>
       </div>
     </div>

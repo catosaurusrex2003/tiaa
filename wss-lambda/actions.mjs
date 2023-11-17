@@ -54,6 +54,8 @@ export const updateConnectionId = async (payload, meta) => {
     Item: {
       email: { S: payload.email },
       username: { S: payload.username },
+      status: { S: payload.status },
+      bio: { S: payload.bio },
       connectionId: { S: meta.connectionId }
     }
   };

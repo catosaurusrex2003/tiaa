@@ -26,6 +26,20 @@ export default function Messages() {
     temp: undefined,
     final: undefined,
   });
+  const [selfStatus, setSelfStatus] = useState<{
+    temp: string | undefined;
+    final: string | undefined;
+  }>({
+    temp: undefined,
+    final: undefined,
+  });
+  const [selfBio, setSelfBio] = useState<{
+    temp: string | undefined;
+    final: string | undefined;
+  }>({
+    temp: undefined,
+    final: undefined,
+  });
   const [socket, setSocket] = useState<WebSocket | undefined>();
   const [usersList, setUsersList] = useState<userDataType[]>([]);
   const [messageList, setMessageList] = useState<eachMessageType[]>([]);
@@ -49,6 +63,8 @@ export default function Messages() {
             action: "updateConnectionId",
             email: selfEmail.final,
             username: selfUsername.final,
+            status: selfStatus.final,
+            bio: selfBio.final,
           })
         );
 
@@ -66,10 +82,17 @@ export default function Messages() {
       switch (message.event) {
         case "allUsersResponse":
           const localUsersList = message.usersList.Items.map(
-            (eachUser: any) => ({
-              username: eachUser.username.S,
-              email: eachUser.email.S,
-            })
+            (eachUser: any) => {
+              if (eachUser.email.S != selfEmail.final) {
+                console.log("eachUser is ", eachUser);
+                return {
+                  username: eachUser.username.S,
+                  email: eachUser.email.S,
+                  status: eachUser.status.S,
+                  bio: eachUser.bio.S,
+                };
+              }
+            }
           );
           setUsersList(localUsersList);
 
@@ -170,15 +193,19 @@ export default function Messages() {
               </div>
               <div className="flex flex-col items-center overflow-y-auto hide-scrollbar h-full ">
                 {usersList?.map((eachUser) => {
-                  if (eachUser.email !== selfEmail.final)
-                    return (
-                      <UserCard
-                        selectedConvo={selectedConvo}
-                        setSelectedConvo={setSelectedConvo}
-                        username={eachUser.username}
-                        email={eachUser.email}
-                      />
-                    );
+                  if (eachUser) {
+                    if (eachUser.email !== selfEmail.final)
+                      return (
+                        <UserCard
+                          selectedConvo={selectedConvo}
+                          setSelectedConvo={setSelectedConvo}
+                          username={eachUser.username}
+                          email={eachUser.email}
+                          status={eachUser.status}
+                          bio={eachUser.bio}
+                        />
+                      );
+                  }
                 })}
               </div>
             </section>
@@ -190,6 +217,7 @@ export default function Messages() {
                       <div className="overflow-y-auto hide-scrollbar max-h-full sm:w-11/12 mx-auto">
                         {messageList.map((eachMessage) => (
                           <EachMessage
+                            selfEmail={selfEmail.final}
                             senderEmail={eachMessage.senderEmail}
                             senderUsername={eachMessage.senderUsername}
                             messageText={eachMessage.messageText}
@@ -237,6 +265,22 @@ export default function Messages() {
               setSelfUsername((prev) => ({ ...prev, temp: e.target.value }))
             }
             placeholder="Username"
+          />
+          <input
+            className="rounded-lg px-3 py-2 my-1 bg-gray-200"
+            value={selfStatus.temp}
+            onChange={(e) =>
+              setSelfStatus((prev) => ({ ...prev, temp: e.target.value }))
+            }
+            placeholder="Status"
+          />
+          <input
+            className="rounded-lg px-3 py-2 my-1 bg-gray-200"
+            value={selfBio.temp}
+            onChange={(e) =>
+              setSelfBio((prev) => ({ ...prev, temp: e.target.value }))
+            }
+            placeholder="Bio"
           />
           <button
             className="bg-blue-300 px-3 py-2 rounded-lg"
