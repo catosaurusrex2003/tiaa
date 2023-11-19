@@ -1,0 +1,37 @@
+{
+  "finance": {
+    "title": "Finance",
+    "body": "These groups provide support for the unique mental health challenges faced by LGBTQ+ individuals, offering a space to discuss identity, and acceptance.",
+    "members": 813,
+    "online": 48,
+    "rank": 5
+  },
+  "healthcare": {
+    "title": "HealthCare",
+    "body": "These groups provide support for the unique mental health challenges faced by LGBTQ+ individuals, offering a space to discuss identity, and acceptance.",
+    "members": 813,
+    "online": 48,
+    "rank": 5
+  },
+  "technology": {
+    "title": "Technology",
+    "body": "These groups provide support for the unique mental health challenges faced by LGBTQ+ individuals, offering a space to discuss identity, and acceptance.",
+    "members": 813,
+    "online": 48,
+    "rank": 5
+  },
+  "education": {
+    "title": "Education",
+    "body": "These groups provide support for the unique mental health challenges faced by LGBTQ+ individuals, offering a space to discuss identity, and acceptance.",
+    "members": 813,
+    "online": 48,
+    "rank": 5
+  },
+  "retail": {
+    "title": "Retail & Sales",
+    "body": "These groups provide support for the unique mental health challenges faced by LGBTQ+ individuals, offering a space to discuss identity, and acceptance.",
+    "members": 813,
+    "online": 48,
+    "rank": 5
+  }
+}
