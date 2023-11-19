@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "author": "korebhaumik",
+    "role": "Full Stack Developer",
+    "category": "Finance",
+    "title": "What is something you know is real in kerala, but others don't seem to believe in?",
+    "content": "What is something you know is real in kerala, but others don't seem to believe in?",
+    "created_at": "2015-07-15T18:00:00.000Z",
+    "likes": 100,
+    "comments": 43
+  },
+  {
+    "id": 2,
+    "author": "korebhaumik",
+    "role": "Full Stack Developer",
+    "category": "Finance",
+    "title": "This post is something finance",
+    "content": "This is my first post.",
+    "created_at": "2015-07-15T18:00:00.000Z",
+    "likes": 564,
+    "comments": 242
+  },
+  {
+    "id": 3,
+    "author": "korebhaumik",
+    "role": "Full Stack Developer",
+    "category": "Finance",
+    "title": "This post is something finance",
+    "content": "This is my first post.",
+    "created_at": "2015-07-15T18:00:00.000Z",
+    "likes": 8765,
+    "comments": 234
+  },
+  {
+    "id": 4,
+    "author": "korebhaumik",
+    "role": "Full Stack Developer",
+    "category": "Healthcare",
+    "title": "This post is something healthcare",
+    "content": "This is my first post.",
+    "created_at": "2015-07-15T18:00:00.000Z",
+    "likes": 8765,
+    "comments": 234
+  },
+  {
+    "id": 5,
+    "author": "korebhaumik",
+    "role": "Full Stack Developer",
+    "category": "Technology",
+    "title": "This post is something Technology",
+    "content": "This is my first post.",
+    "created_at": "2015-07-15T18:00:00.000Z",
+    "likes": 8765,
+    "comments": 234
+  },
+  {
+    "id": 6,
+    "author": "korebhaumik",
+    "role": "Full Stack Developer",
+    "category": "Technology",
+    "title": "This post is something Technology",
+    "content": "This is my first post.",
+    "created_at": "2015-07-15T18:00:00.000Z",
+    "likes": 8765,
+    "comments": 234
+  }
+]
