@@ -1,46 +1,154 @@
 [
   {
-    "id": 1234,
+    "id": 3001,
     "parentId": 1,
-    "author": "korebhaumik",
-    "role": "Full Stack Developer",
-    "title": "My First Post",
-    "content": "This is my first post.",
-    "created_at": "2015-07-15T18:00:00.000Z",
-    "likes": 0,
-    "comments": 43,
+    "author": "newbie_coder",
+    "title": "Starting in Software Development",
+    "content": "Any seasoned devs with advice for a beginner in software engineering?",
+    "created_at": "2023-11-01T10:00:00.000Z",
+    "likes": 25,
+    "comments": 10,
     "subcomments": [
       {
-        "id": 100,
-        "parentId": 1234,
-        "author": "korebhaumik",
-        "title": "My First Post",
-        "content": "This is my first post.",
-        "created_at": "2015-07-15T18:00:00.000Z",
-        "likes": 0,
-        "comments": 43
+        "id": 301,
+        "parentId": 3001,
+        "author": "veteran_programmer",
+        "title": "Starting in Software Development",
+        "content": "Focus on learning one language well before branching out.",
+        "created_at": "2023-11-01T11:00:00.000Z",
+        "likes": 15,
+        "comments": 2,
+        "subcomments": [
+          {
+            "id": 3011,
+            "parentId": 301,
+            "author": "coding_enthusiast",
+            "title": "Starting in Software Development",
+            "content": "Which language would you recommend starting with?",
+            "created_at": "2023-11-01T12:00:00.000Z",
+            "likes": 8,
+            "comments": 1
+          },
+          {
+            "id": 3012,
+            "parentId": 301,
+            "author": "web_dev_pro",
+            "title": "Starting in Software Development",
+            "content": "Python is great for beginners and versatile.",
+            "created_at": "2023-11-01T13:00:00.000Z",
+            "likes": 10,
+            "comments": 0
+          }
+        ]
       },
       {
-        "id": 101,
-        "parentId": 1234,
-        "author": "korebhaumik",
-        "title": "My First Post",
-        "content": "This is my first post.",
-        "created_at": "2015-07-15T18:00:00.000Z",
-        "likes": 0,
-        "comments": 43
+        "id": 302,
+        "parentId": 3001,
+        "author": "code_mentor",
+        "title": "Starting in Software Development",
+        "content": "Contribute to open-source projects to gain practical experience.",
+        "created_at": "2023-11-01T12:00:00.000Z",
+        "likes": 10,
+        "comments": 3,
+        "subcomments": [
+          {
+            "id": 3021,
+            "parentId": 302,
+            "author": "open_source_fan",
+            "title": "Starting in Software Development",
+            "content": "Where can I find beginner-friendly open-source projects?",
+            "created_at": "2023-11-01T14:00:00.000Z",
+            "likes": 12,
+            "comments": 2
+          },
+          {
+            "id": 3022,
+            "parentId": 302,
+            "author": "git_guru",
+            "title": "Starting in Software Development",
+            "content": "Check out GitHub for projects that interest you.",
+            "created_at": "2023-11-01T15:00:00.000Z",
+            "likes": 9,
+            "comments": 1
+          }
+        ]
       }
     ]
   },
   {
-    "id": 12345,
+    "id": 3002,
     "parentId": 2,
-    "author": "korebhaumik",
-    "title": "My First Post",
-    "content": "This is my first post.",
-    "created_at": "2015-07-15T18:00:00.000Z",
-    "likes": 0,
-    "comments": 43,
-    "subcomments": []
+    "author": "finance_freshman",
+    "title": "Entry-Level Finance Career Tips",
+    "content": "Looking for advice on how to navigate the start of a finance career. Any tips?",
+    "created_at": "2023-11-02T09:30:00.000Z",
+    "likes": 30,
+    "comments": 8,
+    "subcomments": [
+      {
+        "id": 303,
+        "parentId": 3002,
+        "author": "investment_veteran",
+        "title": "Entry-Level Finance Career Tips",
+        "content": "Networking is key. Connect with professionals and attend industry events.",
+        "created_at": "2023-11-02T10:15:00.000Z",
+        "likes": 20,
+        "comments": 4,
+        "subcomments": [
+          {
+            "id": 3031,
+            "parentId": 303,
+            "author": "finance_student",
+            "title": "Entry-Level Finance Career Tips",
+            "content": "Any specific events or groups you recommend?",
+            "created_at": "2023-11-02T11:00:00.000Z",
+            "likes": 13,
+            "comments": 2
+          },
+          {
+            "id": 3032,
+            "parentId": 303,
+            "author": "equity_pro",
+            "title": "Entry-Level Finance Career Tips",
+            "content": "Look for local finance meetups and LinkedIn groups.",
+            "created_at": "2023-11-02T12:00:00.000Z",
+            "likes": 15,
+            "comments": 1
+          }
+        ]
+      },
+      {
+        "id": 304,
+        "parentId": 3002,
+        "author": "equity_analyst",
+        "title": "Entry-Level Finance Career Tips",
+        "content": "Stay updated on market trends and learn financial modeling.",
+        "created_at": "2023-11-02T11:30:00.000Z",
+        "likes": 18,
+        "comments": 5,
+        "subcomments": [
+          {
+            "id": 3041,
+            "parentId": 304,
+            "author": "market_watcher",
+            "title": "Entry-Level Finance Career Tips",
+            "content": "Any recommended resources for learning financial modeling?",
+            "created_at": "2023-11-02T13:30:00.000Z",
+            "likes": 11,
+            "comments": 3
+          },
+          {
+            "id": 3042,
+            "parentId": 304,
+            "author": "finance_guru",
+            "title": "Entry-Level Finance Career Tips",
+            "content": "Investopedia and Coursera have some great courses.",
+            "created_at": "2023-11-02T14:15:00.000Z",
+            "likes": 14,
+            "comments": 2
+          }
+        ]
+      }
+    ]
   }
 ]
