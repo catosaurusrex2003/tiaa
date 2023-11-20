@@ -1,8 +1,9 @@
 type userDataType = {
   email: string;
   username: string;
-  status:string,
-  bio:string
+  status: string;
+  bio: string;
+  rand: number;
 };
 
 type eachMessageType = {
