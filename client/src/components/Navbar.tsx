@@ -103,33 +103,35 @@ function Dropdown({
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const { signOut, user } = useAuth();
-  //@ts-expect-error
-  const { displayName, email, credits, subEnd } = user;
+  {
+    //@ts-expect-error}
+    const { displayName, email, credits, subEnd } = user;
 
-  let formattedDate: string | null = null;
-  if (subEnd) {
-    const date = new Date(subEnd);
-    formattedDate = `${date.toLocaleDateString(undefined, {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    })}`;
+    let formattedDate: string | null = null;
+    if (subEnd) {
+      const date = new Date(subEnd);
+      formattedDate = `${date.toLocaleDateString(undefined, {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      })}`;
+    }
+
+    const handleLogOut = async () => {
+      await signOut();
+      setIsOpen(false);
+    };
+
+    return (
+      <div className="px-3 top-11 right-0 text-xs border rounded-lg border-zinc-200 bg-white absolute text-left py-3">
+        <p>{email}</p>
+        <hr className="border-inherit mt-2" />
+        <p className="mt-2">{displayName}</p>
+        <p className="mt-2">Credits Rem: {credits}</p>
+        <button onClick={handleLogOut} className="mt-2">
+          Log Out
+        </button>
+      </div>
+    );
   }
-
-  const handleLogOut = async () => {
-    await signOut();
-    setIsOpen(false);
-  };
-
-  return (
-    <div className="px-3 top-11 right-0 text-xs border rounded-lg border-zinc-200 bg-white absolute text-left py-3">
-      <p>{email}</p>
-      <hr className="border-inherit mt-2" />
-      <p className="mt-2">{displayName}</p>
-      <p className="mt-2">Credits Rem: {credits}</p>
-      <button onClick={handleLogOut} className="mt-2">
-        Log Out
-      </button>
-    </div>
-  );
 }

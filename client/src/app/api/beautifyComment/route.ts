@@ -19,7 +19,7 @@ export async function POST(req: Request) {
   });
   const oneInputPrompt = new PromptTemplate({
     inputVariables: ["comment"],
-    template: `Following is a comment that you need to clean, structure and re-draft properly. Make sure to include all the details of the original comment and do not alter the essence of the comment. Do not alter any technical jargons or phrases if any. If the comment is in first person, keep it in first person; if it is in third person keep it in third person and so on. Also correct spellings and contextual errors if any. You can also make things into bullet points if required. Use bullet points only if necessary and not otherwise. Not every comment needs bullets. {comment}`,
+    template: `Following is a comment that you need to clean, structure and re-draft properly. Make sure to include all the details of the original comment and do not alter the essence of the comment. Do not alter any technical jargons or phrases if any. If the comment is in first person, keep it in first person; if it is in third person keep it in third person and so on. Also correct spellings and contextual errors if any. Remember, keep the perspective of the post same. {comment}`,
   });
   const formattedPrompt = await oneInputPrompt.format({
     comment,

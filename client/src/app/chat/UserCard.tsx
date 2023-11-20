@@ -1,10 +1,11 @@
 type props = {
   username: string;
   email: string;
-  status:string,
-  bio:string,
+  status: string;
+  bio: string;
   selectedConvo: string | undefined;
   setSelectedConvo: (newState: string) => void;
+  rand:number
 };
 export default function UserCard({
   username,
@@ -13,11 +14,12 @@ export default function UserCard({
   bio,
   selectedConvo,
   setSelectedConvo,
+  rand
 }: props) {
   return (
     <div
       onClick={() => setSelectedConvo(email)}
-      className={`flex justify-between gap-2 cursor-pointer py-2 w-full ${
+      className={`flex justify-between gap-2 cursor-pointer py-2 px-2 rounded-md w-full ${
         selectedConvo == email && "bg-gray-200"
       }`}
     >
@@ -27,14 +29,12 @@ export default function UserCard({
       <div className="flex flex-col w-full ">
         <div className="flex justify-between w-full">
           <h3 className="text-sm font-medium">{username || "John Doe"}</h3>
-          <li className="text-xs text-[#7C8081]">10 mins ago</li>
+          <li className="text-xs text-[#7C8081]">{rand} mins ago</li>
         </div>
-        <p className="text-xs text-[#7C8081]">{status}</p>
+        {/* <p className="text-xs text-[#7C8081]">{status}</p>
         <p className="text-xs  mt-1 truncate w-52 ">
-          {/* Track your income Track your income Track your income Track your
-          income */}
           {bio}
-        </p>
+        </p> */}
       </div>
     </div>
   );

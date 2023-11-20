@@ -20,6 +20,7 @@ const RealTimeTranscription = ({ postComment }: props) => {
   const { append, isLoading, messages } = useBeautifyCommentAi();
 
   const beautifyComment = async () => {
+    console.log("appending chat gpt")
     await append({
       content: streamText,
       role: "user",
@@ -94,6 +95,7 @@ const RealTimeTranscription = ({ postComment }: props) => {
           navigator.mediaDevices
             .getUserMedia({ audio: true })
             .then((stream) => {
+              setStatus("RECORDING");
               const localRecorder = new RecordRTC(stream, {
                 type: "audio",
                 mimeType: "audio/webm;codecs=pcm", // endpoint requires 16bit PCM audio
@@ -126,7 +128,6 @@ const RealTimeTranscription = ({ postComment }: props) => {
             })
             .catch((err) => console.error(err));
         };
-        setStatus("RECORDING");
       } catch (error) {
         console.error(error);
       }
@@ -156,8 +157,8 @@ const RealTimeTranscription = ({ postComment }: props) => {
   }, [messages]);
 
   return (
-    <div className="flex flex-col gap-4 w-3/4 mt-10 px-4 py-7 border-[1px] border-border-color rounded-lg shadow-custom bg-white">
-      <div className="flex w-full gap-5 justify-between">
+    <div className="flex flex-col gap-4 w-full px-2 py-4 border border-gray-200 rounded-lg shadow-sm bg-zinc-100">
+      <div className="flex w-full gap-2 justify-between">
         <textarea
           className="border-2 py-1 px-2 w-full rounded-md "
           value={streamText}
@@ -231,7 +232,7 @@ const RealTimeTranscription = ({ postComment }: props) => {
       </div>
       <button
         className="bg-blue-600 active:bg-blue-700 px-3 py-2 rounded-md font-semibold text-white"
-        onClick={()=>postComment(streamText)}
+        onClick={() => postComment(streamText)}
       >
         Post
       </button>

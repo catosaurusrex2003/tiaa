@@ -1,37 +1,37 @@
 {
   "finance": {
     "title": "Finance",
-    "body": "These groups provide support for the unique mental health challenges faced by LGBTQ+ individuals, offering a space to discuss identity, and acceptance.",
-    "members": 813,
-    "online": 48,
-    "rank": 5
+    "body": "Dedicated to discussions on finance, investment strategies, and market trends, providing insights for both beginners and seasoned investors.",
+    "members": 1324,
+    "online": 120,
+    "rank": 3
   },
   "healthcare": {
     "title": "HealthCare",
-    "body": "These groups provide support for the unique mental health challenges faced by LGBTQ+ individuals, offering a space to discuss identity, and acceptance.",
-    "members": 813,
-    "online": 48,
-    "rank": 5
+    "body": "A platform for healthcare professionals and enthusiasts to discuss the latest in medical advancements, healthcare policies, and patient care.",
+    "members": 978,
+    "online": 89,
+    "rank": 4
   },
   "technology": {
     "title": "Technology",
-    "body": "These groups provide support for the unique mental health challenges faced by LGBTQ+ individuals, offering a space to discuss identity, and acceptance.",
-    "members": 813,
-    "online": 48,
-    "rank": 5
+    "body": "Focuses on the latest technological innovations, software development, and tech industry trends, fostering a community of tech enthusiasts.",
+    "members": 1503,
+    "online": 134,
+    "rank": 2
   },
   "education": {
     "title": "Education",
-    "body": "These groups provide support for the unique mental health challenges faced by LGBTQ+ individuals, offering a space to discuss identity, and acceptance.",
-    "members": 813,
-    "online": 48,
-    "rank": 5
+    "body": "A hub for educators, students, and lifelong learners to exchange ideas on teaching methods, e-learning, and educational theories.",
+    "members": 865,
+    "online": 76,
+    "rank": 6
   },
   "retail": {
     "title": "Retail & Sales",
-    "body": "These groups provide support for the unique mental health challenges faced by LGBTQ+ individuals, offering a space to discuss identity, and acceptance.",
-    "members": 813,
-    "online": 48,
+    "body": "Discusses retail management, sales strategies, customer service, and the evolving landscape of brick-and-mortar and online retail.",
+    "members": 1020,
+    "online": 95,
     "rank": 5
   }
 }
