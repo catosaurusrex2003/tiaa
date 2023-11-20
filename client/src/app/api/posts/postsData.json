@@ -1,68 +1,68 @@
 [
   {
     "id": 1,
-    "author": "korebhaumik",
-    "role": "Full Stack Developer",
+    "author": "Rahul Krishnan",
+    "role": "Economic Researcher",
     "category": "Finance",
-    "title": "What is something you know is real in kerala, but others don't seem to believe in?",
-    "content": "What is something you know is real in kerala, but others don't seem to believe in?",
-    "created_at": "2015-07-15T18:00:00.000Z",
-    "likes": 100,
-    "comments": 43
+    "title": "Uncovering Hidden Gems: Investment Strategies in Kerala",
+    "content": "An in-depth analysis of Kerala's emerging financial markets and investment opportunities.",
+    "created_at": "2017-03-21T14:30:00.000Z",
+    "likes": 250,
+    "comments": 67
   },
   {
     "id": 2,
-    "author": "korebhaumik",
-    "role": "Full Stack Developer",
+    "author": "Anjali Nair",
+    "role": "Finance Blogger",
     "category": "Finance",
-    "title": "This post is something finance",
-    "content": "This is my first post.",
-    "created_at": "2015-07-15T18:00:00.000Z",
-    "likes": 564,
-    "comments": 242
+    "title": "Navigating Kerala's Financial Landscape: Tips for Beginners",
+    "content": "A beginner's guide to understanding and making the most of financial opportunities in Kerala.",
+    "created_at": "2018-08-15T10:20:00.000Z",
+    "likes": 789,
+    "comments": 125
   },
   {
     "id": 3,
-    "author": "korebhaumik",
-    "role": "Full Stack Developer",
+    "author": "Vikram Menon",
+    "role": "Financial Consultant",
     "category": "Finance",
-    "title": "This post is something finance",
-    "content": "This is my first post.",
-    "created_at": "2015-07-15T18:00:00.000Z",
-    "likes": 8765,
-    "comments": 234
+    "title": "The Future of Fintech in Kerala: Trends and Predictions",
+    "content": "Exploring the rapid growth of fintech in Kerala and its impact on the local economy.",
+    "created_at": "2016-05-30T17:45:00.000Z",
+    "likes": 1023,
+    "comments": 305
   },
   {
     "id": 4,
-    "author": "korebhaumik",
-    "role": "Full Stack Developer",
+    "author": "Sunita Rao",
+    "role": "Healthcare Analyst",
     "category": "Healthcare",
-    "title": "This post is something healthcare",
-    "content": "This is my first post.",
-    "created_at": "2015-07-15T18:00:00.000Z",
-    "likes": 8765,
-    "comments": 234
+    "title": "Revolutionizing Healthcare in Kerala Through Technology",
+    "content": "Discussing how technological advancements are transforming healthcare services in Kerala.",
+    "created_at": "2019-01-12T09:10:00.000Z",
+    "likes": 654,
+    "comments": 210
   },
   {
     "id": 5,
-    "author": "korebhaumik",
-    "role": "Full Stack Developer",
+    "author": "Arjun Pillai",
+    "role": "Tech Entrepreneur",
     "category": "Technology",
-    "title": "This post is something Technology",
-    "content": "This is my first post.",
-    "created_at": "2015-07-15T18:00:00.000Z",
-    "likes": 8765,
-    "comments": 234
+    "title": "The Rise of Tech Startups in Kerala's Silicon Coast",
+    "content": "An overview of the booming startup ecosystem in Kerala and its contribution to the tech industry.",
+    "created_at": "2017-11-07T20:30:00.000Z",
+    "likes": 876,
+    "comments": 189
   },
   {
     "id": 6,
-    "author": "korebhaumik",
-    "role": "Full Stack Developer",
+    "author": "Meera Krishnan",
+    "role": "Software Engineer",
     "category": "Technology",
-    "title": "This post is something Technology",
-    "content": "This is my first post.",
-    "created_at": "2015-07-15T18:00:00.000Z",
-    "likes": 8765,
-    "comments": 234
+    "title": "Innovations in AI: Kerala's Path to Becoming a Tech Hub",
+    "content": "Analyzing how artificial intelligence is driving innovation and attracting global attention to Kerala's tech scene.",
+    "created_at": "2018-04-22T16:05:00.000Z",
+    "likes": 1134,
+    "comments": 342
   }
 ]
