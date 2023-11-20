@@ -4,6 +4,7 @@ import ArrowSVG from "@/assets/ArrowSVG";
 import HouseSVG from "@/assets/HouseSVG";
 import PopSVG from "@/assets/popSVG";
 import { usePosts } from "@/context/Posts.context";
+import { redirect } from "next/navigation";
 import React from "react";
 
 type Props = {};
@@ -20,6 +21,7 @@ export default function Sidebar({}: Props) {
           <p
             onClick={() => {
               filterPosts("all");
+              window.location.href = "/community";
             }}
             className="flex items-center text-[15px] px-4 py-2 rounded-lg hover:bg-zinc-200 transition "
           >
