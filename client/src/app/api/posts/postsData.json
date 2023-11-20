@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "author": "Rahul Krishnan",
+    "role": "Economic Researcher",
+    "category": "Finance",
+    "title": "Uncovering Hidden Gems: Investment Strategies in Kerala",
+    "content": "An in-depth analysis of Kerala's emerging financial markets and investment opportunities.",
+    "created_at": "2017-03-21T14:30:00.000Z",
+    "likes": 250,
+    "comments": 67
+  },
+  {
+    "id": 2,
+    "author": "Anjali Nair",
+    "role": "Finance Blogger",
+    "category": "Finance",
+    "title": "Navigating Kerala's Financial Landscape: Tips for Beginners",
+    "content": "A beginner's guide to understanding and making the most of financial opportunities in Kerala.",
+    "created_at": "2018-08-15T10:20:00.000Z",
+    "likes": 789,
+    "comments": 125
+  },
+  {
+    "id": 3,
+    "author": "Vikram Menon",
+    "role": "Financial Consultant",
+    "category": "Finance",
+    "title": "The Future of Fintech in Kerala: Trends and Predictions",
+    "content": "Exploring the rapid growth of fintech in Kerala and its impact on the local economy.",
+    "created_at": "2016-05-30T17:45:00.000Z",
+    "likes": 1023,
+    "comments": 305
+  },
+  {
+    "id": 4,
+    "author": "Sunita Rao",
+    "role": "Healthcare Analyst",
+    "category": "Healthcare",
+    "title": "Revolutionizing Healthcare in Kerala Through Technology",
+    "content": "Discussing how technological advancements are transforming healthcare services in Kerala.",
+    "created_at": "2019-01-12T09:10:00.000Z",
+    "likes": 654,
+    "comments": 210
+  },
+  {
+    "id": 5,
+    "author": "Arjun Pillai",
+    "role": "Tech Entrepreneur",
+    "category": "Technology",
+    "title": "The Rise of Tech Startups in Kerala's Silicon Coast",
+    "content": "An overview of the booming startup ecosystem in Kerala and its contribution to the tech industry.",
+    "created_at": "2017-11-07T20:30:00.000Z",
+    "likes": 876,
+    "comments": 189
+  },
+  {
+    "id": 6,
+    "author": "Meera Krishnan",
+    "role": "Software Engineer",
+    "category": "Technology",
+    "title": "Innovations in AI: Kerala's Path to Becoming a Tech Hub",
+    "content": "Analyzing how artificial intelligence is driving innovation and attracting global attention to Kerala's tech scene.",
+    "created_at": "2018-04-22T16:05:00.000Z",
+    "likes": 1134,
+    "comments": 342
+  }
+]

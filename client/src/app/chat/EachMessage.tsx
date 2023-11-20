@@ -1,18 +1,28 @@
-export default function EachMessage() {
+type props = eachMessageType & {
+  selfEmail: string | undefined;
+};
+
+export default function EachMessage({
+  selfEmail,
+  senderEmail,
+  senderUsername,
+  messageText,
+  timestamp,
+  conversationId,
+}: props) {
   return (
     <div className="flex items-center py-4 border-b-[1px] border-[#D8D8D8]">
       <div className="mr-2 sm:mr-5">
-        <div className=" h-10 w-10 rounded-full bg-green-200" />
+        <div
+          className={`h-6 w-6 sm:h-10 sm:w-10 rounded-full ${
+            senderEmail == selfEmail ? "bg-blue-200" : "bg-green-200"
+          }`}
+        />
       </div>
-      <p className=" w-full text-sm sm:text-base">
-        Hey, Max! How have you been? I feel like it has been ages since we
-        caught up.
-      </p>
+      <p className=" w-full text-sm sm:text-base">{messageText}</p>
       <div className=" flex items-center gap-3">
         <svg
-          className=""
-          width="14"
-          height="14"
+          className=" h-2 w-2 sm:h-4 sm:w-4 cursor-pointer"
           viewBox="0 0 14 14"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -25,9 +35,7 @@ export default function EachMessage() {
           />
         </svg>
         <svg
-          className=""
-          width="16"
-          height="18"
+          className=" h-4 w-4 sm:h-6 sm:w-6 cursor-pointer"
           viewBox="0 0 16 18"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
