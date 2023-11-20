@@ -38,13 +38,6 @@ export const routes = (app: Application) => {
 
     await previousVectorStore.addDocuments(output);
     await previousVectorStore.save(candidateDirectory);
-    // const vectorStore = await HNSWLib.fromDocuments(
-    //   output,
-    //   new OpenAIEmbeddings({
-    //     openAIApiKey: "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",
-    //     modelName: "text-embedding-ada-002",
-    //   })
-    // );
 
     // await HNSWLib.fromDocuments()
     // await previousVectorStore.save(candidateDirectory);

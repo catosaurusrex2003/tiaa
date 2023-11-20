@@ -8,8 +8,6 @@ app.use(express.json());
 app.use(cors());
 
 //Routes
-
-
 routes(app);
 
 //Listener
